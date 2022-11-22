@@ -49,7 +49,7 @@ app.get("/get-data", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("WEBCODE2");
+    const db = await connection.db("WEBCODE2");
 
     //Select collection
     //Do operation(CRUD)
@@ -96,7 +96,7 @@ app.get("/get-business", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("WEBCODE2");
+    const db =await connection.db("WEBCODE2");
 
     //Select collection
     //Do operation(CRUD)
