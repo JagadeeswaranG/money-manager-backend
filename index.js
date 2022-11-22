@@ -6,11 +6,14 @@ const app = express();
 const dotenv = require("dotenv").config();
 const URL = process.env.DB;
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+// app.use(
+//   cors({
+//     // origin: "*",
+
+//   })
+// );
+
+app.use(cors())
 
 app.use(express.json());
 
