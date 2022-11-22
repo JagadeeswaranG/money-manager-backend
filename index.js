@@ -16,6 +16,7 @@ const URL = process.env.DB;
 app.use(cors())
 
 app.use(express.json());
+console.log(URL);
 
 // create-add inc/exp
 app.post("/create-data", async (req, res) => {
@@ -24,7 +25,7 @@ app.post("/create-data", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("WEBCODE2");
+    const db =  await connection.db("WEBCODE2");
 
     //Select Collection
     //Do operation(CRUD)
@@ -71,7 +72,7 @@ app.post("/create-business", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("WEBCODE2");
+    const db = await connection.db("WEBCODE2");
 
     //Select Collection
     //Do operation(CRUD)
