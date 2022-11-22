@@ -21,7 +21,7 @@ app.post("/create-data", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("B39WDT2");
+    const db = connection.db("WEBCODE2");
 
     //Select Collection
     //Do operation(CRUD)
@@ -45,7 +45,7 @@ app.get("/get-data", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("B39WDT2");
+    const db = connection.db("WEBCODE2");
 
     //Select collection
     //Do operation(CRUD)
@@ -68,7 +68,7 @@ app.post("/create-business", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("B39WDT2");
+    const db = connection.db("WEBCODE2");
 
     //Select Collection
     //Do operation(CRUD)
@@ -92,7 +92,7 @@ app.get("/get-business", async (req, res) => {
     const connection = await mongoclient.connect(URL);
 
     //Select the DB
-    const db = connection.db("B39WDT2");
+    const db = connection.db("WEBCODE2");
 
     //Select collection
     //Do operation(CRUD)
